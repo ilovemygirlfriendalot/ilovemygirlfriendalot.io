@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Pacifico', cursive;
+            text-align: center;
+            background: url('https://i.postimg.cc/RhQZM42R/IMG-9662.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 10%;
+            
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .container {
+            margin-top: 20px;
+        }
+
+        /* Button Styles */
+        .button {
+            background-color: red;
+            color: white;
+            padding: 2px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: darkred;
+            box-shadow: 0 0 15px red;
+        }
+
+        /* Heart Animation */
+        .heart {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+            margin: 20px auto;
+            transform: rotate(-45deg);
+            animation: pulse 1.5s infinite;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+
+        /* Countdown Styles */
+        #countdown {
+            font-size: 1.25em;
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>will you be MY valentine?</h1>
+
+    <!-- Animated Heart -->
+    <div class="heart"></div>
+
+    <!-- Countdown Timer -->
+    <p id="countdown">g + j </p>
+
+    <!-- Buttons -->
+    <div class="container">
+        <a href="#" class="button">yes</a>
+        <a href="#" class="button">yes</a>
+    </div>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="https://example.com/your-romantic-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    </body>
+    </html>
